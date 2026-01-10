@@ -6,9 +6,7 @@
   <title>Lidsam Fresh Growers | Premium Kenyan Herbs</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -30,9 +28,7 @@
       z-index: 10;
     }
 
-    .nav img {
-      height: 100px;
-    }
+    .nav img { height: 100px; }
 
     .nav a {
       color: #fff;
@@ -44,11 +40,8 @@
     /* HERO */
     .hero {
       height: 100vh;
-      background: linear-gradient(
-          rgba(0, 0, 0, 0.45),
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("Brochure.jpeg") center / cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                  url("Brochure.jpeg") center / cover no-repeat;
       display: flex;
       align-items: center;
       padding: 0 10%;
@@ -67,14 +60,8 @@
     }
 
     /* SECTIONS */
-    section {
-      padding: 80px 10%;
-    }
-
-    h2 {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-    }
+    section { padding: 80px 10%; }
+    h2 { font-size: 2.4rem; margin-bottom: 20px; }
 
     /* TABS */
     .tabs {
@@ -86,9 +73,7 @@
       scrollbar-width: none;              /* hide scrollbar in Firefox */
     }
 
-    .tabs::-webkit-scrollbar {
-      display: none;                      /* hide scrollbar in Chrome/Safari */
-    }
+    .tabs::-webkit-scrollbar { display: none; } /* hide scrollbar Chrome/Safari */
 
     .tab {
       flex: 0 0 auto;                     /* prevent shrinking */
@@ -99,14 +84,9 @@
       font-weight: 600;
     }
 
-    .tab.active {
-      background: #2e7d32;
-      color: #fff;
-    }
+    .tab.active { background: #2e7d32; color: #fff; }
 
-    .tab-content {
-      display: none;
-    }
+    .tab-content { display: none; }
 
     .tab-content.active {
       display: grid;
@@ -129,18 +109,11 @@
       object-fit: cover;
     }
 
-    .card .info {
-      padding: 18px;
-    }
+    .card .info { padding: 18px; }
 
-    .card h3 {
-      margin: 0 0 6px;
-    }
+    .card h3 { margin: 0 0 6px; }
 
-    .price {
-      font-weight: 700;
-      color: #2e7d32;
-    }
+    .price { font-weight: 700; color: #2e7d32; }
 
     /* OPERATIONS */
     .operations {
@@ -149,10 +122,7 @@
       gap: 30px;
     }
 
-    .operations img {
-      width: 100%;
-      border-radius: 12px;
-    }
+    .operations img { width: 100%; border-radius: 12px; }
 
     /* CONTACT */
     .contact {
@@ -161,9 +131,7 @@
       text-align: center;
     }
 
-    .contact p {
-      font-size: 1.1rem;
-    }
+    .contact p { font-size: 1.1rem; }
 
     footer {
       background: #0f3d1e;
@@ -174,13 +142,10 @@
     }
 
     @media (max-width: 768px) {
-      .nav {
-        padding: 14px 24px;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-      }
+      .nav { padding: 14px 24px; }
+      .hero h1 { font-size: 2.5rem; }
     }
+
   </style>
 
   <script>
@@ -188,9 +153,16 @@
       document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
       document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
       document.getElementById(id).classList.add("active");
-      document.getElementById(id + "-btn").classList.add("active");
+
+      // Fix for the Farm Operations tab
+      if (id === "operations-tab") {
+        document.getElementById("operations-btn").classList.add("active");
+      } else {
+        document.getElementById(id + "-btn").classList.add("active");
+      }
     }
   </script>
+
 </head>
 
 <body>
@@ -206,9 +178,7 @@
   </div>
 
   <!-- HERO -->
-  <div class="hero">
-    <div><h1></h1></div>
-  </div>
+  <div class="hero"><div><h1></h1></div></div>
 
   <!-- PRODUCTS -->
   <section id="products">
@@ -222,17 +192,39 @@
 
     <!-- FRESH HERBS -->
     <div id="fresh" class="tab-content active">
-      <!-- Your fresh herbs cards go here (unchanged) -->
+      <!-- All your fresh herbs cards -->
+      <div class="card"><img src="images/herbs/parsley.jpg" alt="Parsley"><div class="info"><h3>Parsley</h3><div class="price">
+Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/dill.jpg" alt="Dill"><div class="info"><h3>Dill</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/lemongrass.jpg" alt="Lemongrass"><div class="info"><h3>Lemongrass</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/sage.jpg" alt="Sage"><div class="info"><h3>Sage</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/thyme.jpg" alt="Thyme"><div class="info"><h3>Thyme</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/rosemary.jpg" alt="Rosemary"><div class="info"><h3>Rosemary</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/chives.jpg" alt="Chives"><div class="info"><h3>Chives</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/mint.jpg" alt="Mint"><div class="info"><h3>Mint</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/coriander.jpg" alt="Coriander"><div class="info"><h3>Coriander</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/basil.jpg" alt="Basil"><div class="info"><h3>Basil</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
+      <div class="card"><img src="images/herbs/oregano.jpg" alt="Oregano"><div class="info"><h3>Oregano</h3><div class="price">Prices vary by market and order quantities. Please contact us for quotations, bulk orders, and export inquiries.</div></div></div>
     </div>
 
     <!-- PACKAGED -->
     <div id="packaged" class="tab-content">
-      <!-- Your packaged product cards go here (unchanged) -->
+      <!-- All packaged products cards -->
+      <div class="card"><img src="images/packaged/packed_dried_herbs_1.jpg" alt="Packaged Dried Herbs"><div class="info"><h3>Packaged Dried Herbs</h3></div></div>
+      <div class="card"><img src="images/packaged/packed_dried_herbs_2.jpg" alt="Retail-Ready Herb Packs"><div class="info"><h3>Retail-Ready Herb Packs</h3></div></div>
+      <div class="card"><img src="packaged for export.jpeg" alt="Packaged for export"><div class="info"><h3>Packaged For Export</h3></div></div>
+      <div class="card"><img src="images/packaged/dried-oregano.jpeg" alt="Dried Oregano"><div class="info"><h3>Dried Oregano</h3></div></div>
+      <div class="card"><img src="images/packaged/dried-rosemary.jpeg" alt="Dried Rosemary"><div class="info"><h3>Dried Rosemary</h3></div></div>
+      <div class="card"><img src="images/packaged/dried-sage.jpeg" alt="Dried Sage"><div class="info"><h3>Dried Sage</h3></div></div>
+      <div class="card"><img src="images/packaged/dried-spearmint.jpeg" alt="Dried Spearmint"><div class="info"><h3>Dried Spearmint</h3></div></div>
     </div>
 
     <!-- OPERATIONS -->
     <div id="operations-tab" class="tab-content">
-      <!-- Your operations cards go here (unchanged) -->
+      <div class="card"><img src="images/operations/greenhouses_and_dam.jpg" alt="Greenhouse Cultivation"><div class="info"><h3>Greenhouse Cultivation</h3></div></div>
+      <div class="card"><img src="images/operations/drip_systems.jpg" alt="Drip Irrigation Systems"><div class="info"><h3>Drip Irrigation Systems</h3></div></div>
+      <div class="card"><img src="images/operations/solar_drier.jpg" alt="Solar Drying Technology"><div class="info"><h3>Solar Drying Technology</h3></div></div>
+      <div class="card"><img src="coldroom.jpeg" alt="Cold room"><div class="info"><h3>Cold room</h3></div></div>
     </div>
 
   </section>
